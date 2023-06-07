@@ -1,4 +1,18 @@
 .Footer {
 	font-size: 0.75em;
 	margin-top: auto;
+	background-color: #225560;
+	width: 100%;
+	color: #ffff;
+	text-align: center;
+	padding: 20px;
+}
+.footer-text {
+	padding: 10px;
+}
+footer p a {
+	color: #acc8e5;
+}
+footer p a:hover {
+	color: blue;
 }

@@ -28,38 +28,41 @@ export function App() {
 	if (selectTitle) {
 		return (
 			<div>
-				<h2>{selectTitle.title}</h2>
-				<p>By {selectTitle.artist_title}</p>
-				<ImageDetailsPage image={selectTitle.image_id} />
-				<button onClick={() => setSelectTitle(null)}>Go Back</button>
+				<div className="container">
+					<h2>{selectTitle.title}</h2>
+					<p>By {selectTitle.artist_title}</p>
+					<ImageDetailsPage image={selectTitle.image_id} />
+				</div>
+				<button className="Home-btn" onClick={() => setSelectTitle(null)}>
+					Go Back
+				</button>
+
 				<Footer />
 			</div>
 		);
 	}
 
 	return (
-		<div className="App">
-			<h1>TCL Career Lab Art Finder</h1>
-			<SearchForm onSearchSubmit={onSearchSubmit} />
+		<div>
+			<div className="App">
+				<h1>TCL Career Lab Art Finder</h1>
+				<SearchForm onSearchSubmit={onSearchSubmit} />
 
-			<ul>
-				{data.map((val) => (
-					<li key={val.id}>
-						<a
-							href="#"
-							style={{ cursor: 'pointer' }}
-							onClick={() => handleClick(val)}
-							onKeyDown={(e) => {
-								if (e.key === 'Enter' || e.key === ' ') {
-									handleClick(val);
-								}
-							}}
-						>
-							{`${val.title} ${val.date_display} by ${val.artist_title}`}
-						</a>
-					</li>
-				))}
-			</ul>
+				<ul>
+					{data.map((val) => (
+						<li key={val.id} className="list">
+							<a
+								className="listItem"
+								href="#"
+								style={{ cursor: 'pointer' }}
+								onClick={() => handleClick(val)}
+							>
+								{`${val.title} ${val.date_display} by ${val.artist_title}`}
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
 			<Footer />
 		</div>
 	);

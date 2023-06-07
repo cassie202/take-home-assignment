@@ -1,7 +1,11 @@
+body {
+	background-color: #acc8e5;
+}
+
 .App {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	/* height: 100vh; */
 	margin: 0 auto;
 	max-width: 95%;
 	width: 72ch;
@@ -9,4 +13,22 @@
 
 .App > h1 {
 	text-align: center;
+	color: #112a46;
+}
+.list .listItem {
+	color: #112a46;
+	font-size: 18px;
+	padding: 5px;
+}
+.list {
+	margin-bottom: 15px;
+}
+.Home-btn {
+	padding: 5px 10px;
+	margin-inline: 5px 0;
+	margin-block: 0 5px;
+
+	background-color: #225560;
+	color: #ffff;
+	cursor: pointer;
 }

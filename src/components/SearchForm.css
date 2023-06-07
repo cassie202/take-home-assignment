@@ -23,4 +23,17 @@
 .Form .input {
 	border: 1px solid var(--color-border);
 	border-radius: 0;
+	font-size: 24px;
+	background-color: #ffffff;
+}
+.input:focus {
+	border: 1px solid var(--color-border);
+}
+/* #112a46 */
+.button {
+	color: white;
+	font-size: 24px;
+	background-color: #225560;
+	border-radius: 5px;
+	cursor: pointer;
 }
